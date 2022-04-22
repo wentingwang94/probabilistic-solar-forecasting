@@ -28,7 +28,7 @@ from sklearn.metrics import mean_squared_error
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # load BON data
 # Data can be replaced here with other sites (DRA, FPK, GWN, PSU, SXF, TBL)
-data_target = pd.read_csv('C:/WWT/论文/ECMWF_ENS/supplementary material/post-processing/data/BON.csv',index_col=-2)
+data_target = pd.read_csv('C:/WWT/论文/ECMWF_ENS/supplementary material/post-processing/data/ENS_BON.csv',index_col=-2)
 # find zenith > 85 degree
 data_target.loc[data_target['Solar Zenith Angle'] > 85,'NSRDB_GHI'] = np.nan
 
