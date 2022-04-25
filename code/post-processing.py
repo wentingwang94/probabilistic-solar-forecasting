@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Apr 22 15:25:12 2022
-
-@author: Wenting Wang
+author: Wenting Wang
+School of Electrical Engineering and Automation
+Harbin Institute of Technology
+wangwenting3000@gmail.com
 """
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -150,17 +152,8 @@ CRPS_withEMOS_test = np.mean(  np.sqrt(results_train[1]*s2_test + results_train[
 var_emos = results_train[1]*s2_test + results_train[2]
 st = np.sqrt(var_emos)
 mu = results_train[0] + mu_test
-
 predictive_distribution = stats.norm.cdf(data_test.NSRDB_GHI, loc=mu, scale=st)
-
 pd_cdf = pd.DataFrame(predictive_distribution, columns = ['distribution'])
 pd_cdf['STN'] = 'BON'
 # pd_cdf.to_csv("PIT_BON.csv")
-
-
-
-
-
-
-
 
