@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Apr  3 09:25:53 2022
-
-@author: Wenting Wang
+author: Wenting Wang
+School of Electrical Engineering and Automation
+Harbin Institute of Technology
+wangwenting3000@gmail.com
 """
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -436,23 +438,3 @@ rmse_mean = mean_squared_error(Results_GBM.real_PV, Results_GBM.predict_power, s
 # scatter plot
 sns.set_theme(style="darkgrid")
 sns.scatterplot(x=Results_GBM.real_PV, y=Results_GBM.predict_power)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
