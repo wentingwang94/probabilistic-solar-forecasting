@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Apr  1 09:40:40 2022
-
-@author: Wenting Wang
+author: Wenting Wang
+School of Electrical Engineering and Automation
+Harbin Institute of Technology
+wangwenting3000@gmail.com
 """
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -81,7 +83,6 @@ ENS_mean_Jacumba_p = pd.DataFrame(columns=['member_mean'], index=ENS_mean_Jacumb
 ENS_mean_Jacumba_p['member_mean'] = ENS_mean_Jacumba['member_mean'] / McClear_agg_1h_raw['Clear sky GHI'] * McClear_agg_1h_advance_30min['Clear sky GHI']
 ENS_mean_Jacumba_p.index = ENS_mean_Jacumba_p.index - pd.Timedelta("30min")
 
-
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # download ECMWF HRES forecasts
@@ -95,11 +96,9 @@ weather_HRES = metadata_HRES[['u10','v10','t2m']]
 # Eq.(1) in https://doi.org/10.1016/j.solener.2021.12.011
 weather_HRES.insert(2,"wind_speed", np.sqrt((weather_HRES.u10)**2 + (weather_HRES.v10)**2))
 
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 # zenith angle
-
 # latitude, longitude
 lat, lon = 32.6193, -116.13
 # Times
@@ -113,8 +112,7 @@ zenith = position.zenith
 zenith_angle = pd.DataFrame(columns=['ECMWF_time','zenith'],index=zenith.index)
 zenith_angle['zenith'] = zenith
 zenith_angle['ECMWF_time'] = zenith_angle.index - pd.Timedelta("30min")
-#-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 # define a temporary dataframe
 temp = ENS_mean_Jacumba_p.copy()
 temp.index = zenith_time
@@ -220,7 +218,7 @@ Results_2020  = Results.filter(like='2020', axis=0)
 # save
 # Results_MC = Results_2020.to_csv("C:/Users/81095/PY/PV forecasting model chain/Results_MC.csv")
 
-
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 # RMSE nRMSE
 from sklearn.metrics import mean_squared_error
