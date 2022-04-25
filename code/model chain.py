@@ -224,23 +224,8 @@ Results_2020  = Results.filter(like='2020', axis=0)
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 # RMSE nRMSE
 from sklearn.metrics import mean_squared_error
+# root mean square error 
 rmse = mean_squared_error(Results_2020.SAM_gen, Results_2020.PV_AC, squared=False)
-
+# normalized root mean square error
 mean_measurements = Results_2020.SAM_gen.mean()
-
 nRMSE = rmse/mean_measurements
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
