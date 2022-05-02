@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Apr 22 15:25:12 2022
-author: Wenting Wang
-School of Electrical Engineering and Automation
-Harbin Institute of Technology
-wangwenting3000@gmail.com
+Created on Fri Apr 22 15:25:12 2022#############
+author: Wenting Wang############################
+School of Electrical Engineering and Automation#
+Harbin Institute of Technology##################
+wangwenting3000@gmail.com#######################
 """
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
