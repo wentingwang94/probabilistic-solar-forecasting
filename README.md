@@ -8,6 +8,7 @@ The code is written in Python, and some packages should be installed before the 
   * Package [pvlib](https://pvlib-python.readthedocs.io/en/stable/) provides functions for simulating the performance of PV systems.
   * Package [scipy](https://scipy.org/) provides algorithms for scientific computing.
   * Package [sklearn](https://scikit-learn.org/stable/) is the basic package for machine learning.
+  * Package [hydrostats](https://hydrostats.readthedocs.io/en/stable) is a library of functions for time series analysis.
 
 Other Python packages that used for plotting the results include [seaborn](https://seaborn.pydata.org/), [matplotlib](https://matplotlib.org/), and [plotnine](https://plotnine.readthedocs.io/en/stable/). 
 
